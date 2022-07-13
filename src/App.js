@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Connexion from './pages/Connexion';
+import Contact from './pages/Contact';
+import EspaceAbonne from './pages/EspaceAbonne';
+import Home from './pages/Home';
+import Inscription from './pages/Inscription';
+import Quiz from './pages/Quiz';
+import QuizCat from './pages/QuizCat';
+import './style/App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>hello quiz</h2>
+      
+      <BrowserRouter>
+      <Navigation/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quizs" element={<QuizCat />} />
+          <Route path="/quiz/:id" element={<Quiz />} />
+          <Route path="/connexion" element={<Connexion />} />
+          <Route path="/inscription" element={<Inscription />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/espace" element={<EspaceAbonne />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
