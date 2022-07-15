@@ -8,6 +8,8 @@ import Inscription from './pages/Inscription';
 import Quiz from './pages/Quiz';
 import QuizCat from './pages/QuizCat';
 import './style/App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 function App() {
   return (
