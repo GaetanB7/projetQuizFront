@@ -1,0 +1,21 @@
+.logo{
+    width:123%;
+    /* margin-bottom: 15px; */
+    margin-left: 100px;
+    mix-blend-mode: lighten;
+  
+}
+
+.logo:hover{
+    animation: rotation 3s linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
