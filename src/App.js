@@ -9,6 +9,9 @@ import Quiz from './pages/Quiz';
 import QuizCat from './pages/QuizCat';
 import './style/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Footer from './components/Footer';
 
 
 function App() {
@@ -17,9 +20,10 @@ function App() {
       <h2>hello quiz</h2>
       
       <BrowserRouter>
-      <Navigation/>
+      {/* <Navigation/> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path= "/" element = {<Footer/>} /> */}
           <Route path="/quizs" element={<QuizCat />} />
           <Route path="/quiz/:id" element={<Quiz />} />
           <Route path="/connexion" element={<Connexion />} />

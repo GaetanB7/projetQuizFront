@@ -1,0 +1,14 @@
+.bestquiz .card {
+margin: 0 auto;
+}
+
+.bestquiz a {
+    text-decoration: none;
+}
+
+.bestquiz a:hover {
+    color:brown;
+    font-size: 35px;
+}
+ 
+

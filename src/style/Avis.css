@@ -1,0 +1,52 @@
+
+.container_bodyAvis{
+    margin-top:50px;
+}
+
+.container_Avis {
+    
+   padding-top: 50px;
+    display: grid;
+    margin: 0 auto;
+    height: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 37px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    width: 80%;
+    }
+
+
+    .container_Avis img { max-width: 30%; }
+    
+    .card_Avis1 {
+        border-radius: 30px;
+        padding-top:60px;
+        color: white;
+        background-color: rgb(26, 26, 59);
+         grid-area: 1 / 1 / 2 / 2; }
+    .card_Avis2 { 
+        border-radius: 30px;
+        padding-top:60px;
+        color:white;
+         background-color: rgb(26, 26, 59);
+        grid-area: 1 / 2 / 2 / 3; }
+    .card_Avis3 {border-radius: 30px;
+        padding-top:60px;
+        color:white;
+        background-color: rgb(26, 26, 59);
+         grid-area: 1 / 3 / 2 / 4; }
+    
+         p {width:  80%;
+            margin: 0 auto;
+            padding-bottom: 30px;}
+         h4 {padding-top: 30px;}
+
+         @media screen and (max-width: 600px) {
+             
+                .container_Avis {
+                    display : inline-block; }
+                }
+            
+          
