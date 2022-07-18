@@ -12,25 +12,32 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Footer from './components/Footer';
+import Quizs from './pages/Quizs';
+import Categories from './pages/Categories';
+
 
 
 function App() {
   return (
     <div className="App">
-      <h2>hello quiz</h2>
-      
-      <BrowserRouter>
-      {/* <Navigation/> */}
-        <Routes>
+      <BrowserRouter>    
+          
+        <Navigation />
+       <div className='mt-5 col-md-10'>
+       <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path= "/" element = {<Footer/>} /> */}
           <Route path="/quizs" element={<QuizCat />} />
+          <Route path="/quizs/categorie" element={<QuizCat />} />
           <Route path="/quiz/:id" element={<Quiz />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/espace" element={<EspaceAbonne />} />
+          <Route path="/quizs" element={<Quizs />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
+       </div>
+       <Footer/>
       </BrowserRouter>
     </div>
   );

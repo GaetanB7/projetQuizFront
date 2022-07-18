@@ -1,0 +1,62 @@
+.navbar{
+    font-family: 'Roboto Slab', serif;
+    background-color: #0a2461;
+   mix-blend-mode: lighten;
+   border: 1px solid #0a2461;
+   border-radius: 10px 10px;
+}
+.navbar-brand{
+    margin-left: -70px !important;
+}
+.navbar a {
+    color: white;
+    /* color: black; */
+    font-size: 19pt;
+font-weight: bold;
+    text-decoration: none;
+    /* margin-left: 5%; */
+}
+
+.nav-item{
+     margin-left: 1%;
+}
+.nav-link {
+    color: white;
+    margin-left: 15px;
+   
+}
+a:hover {
+    color:  #EB9202 !important;
+}
+
+
+.loginLogOut{
+    margin-left: 90%;
+    
+}
+.navbar-toggler{
+    background-color: aliceblue;
+}
+.navbar{
+ 
+    margin-top: 3px;
+}
+.burger{
+    width: 40px;
+    /* margin-right: 5px; */
+  
+}
+.icones{
+    width: 30px;
+    height: 25px;
+   
+}
+.btnCustom{
+    margin-left: 2px !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+    border-radius: 15px 15px 5px 15px !important;
+}
+.inputCustom{
+   color: black;
+}
