@@ -1,0 +1,67 @@
+   .footercontenu{
+    background-color: #0a2461;
+    position: relative; 
+    width: 100%;
+    bottom: 0;
+    color: white;
+    height:5%;   
+    margin: 0;
+    mix-blend-mode: lighten;
+
+ }
+
+ .row{
+    text-decoration: none;
+    display:  flex;
+    justify-content: space-between;
+    
+
+}
+
+ .logo{
+    width: 175px;
+
+    }  
+
+ .lien{
+    margin-left: 25px;
+        color: white; 
+        text-decoration: none;
+      
+     }
+  
+ .socialMedia{
+   width: 50px;
+   padding: 5px;
+   margin-left: 35px;
+
+ }
+
+.liste-media { 
+   justify-content: flex-start;
+   list-style-type: none;  
+   display: flex;
+   
+     }  
+       
+     
+.reseau span {
+        border:1px solid #EB9202;
+       border-width: 2px;  
+        border-radius: 5px;
+        padding:0 10px;
+      }
+     
+    .logoFooter{
+       margin-left: 12%;
+      width: 65%;
+      mix-blend-mode: lighten;
+    }
+
+
+   
+ 
+ 
+
+
+   

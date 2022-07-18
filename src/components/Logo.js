@@ -1,10 +1,11 @@
 import React from 'react';
-
+import '../style/Logo.css';
 const Logo = () => {
     return (
-        <div>
-            <h2>logo</h2>
-        </div>
+        
+        <img className='logo' alt="logo" src="images/Quiz.png" /> 
+        
+   
     );
 };
 
