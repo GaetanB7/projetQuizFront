@@ -11,7 +11,7 @@ const BestQuiz = () => {
       .then((result) => setQuiz(result.data));
   }, {});
   return (
-    <div className="bestquiz">
+    <div className="bestquiz mb-5">
         <div className="card border-0" style={{width:"50%"}}>
   <img className="card-img-top" src={quiz.image} alt="Card image cap" />
   <div className="card-body">

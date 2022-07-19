@@ -53,7 +53,7 @@ const Footer = () => (
 
             </div>
 
-            <div className="row mb-5 m-2" style={{ justifyContent: "center" }}>
+            <div className="row " style={{ justifyContent: "center" }}>
 
                 <div className="col-12 col-md-5">
                     <h5 className='m-5 text-center'> Copyright QuizzGame 2022 </h5>

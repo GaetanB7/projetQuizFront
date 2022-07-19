@@ -10,7 +10,7 @@ const Home = () => {
     return (
        
 
-        <div className='col-md-10 m-5'>
+        <div className='container-fluid'>
             <Slogan />
             <BestQuiz/> 
             <CarouselCat />

@@ -18,7 +18,8 @@
     }
 
 
-    .container_Avis img { max-width: 30%; }
+    .container_Avis img { max-width: 30%;
+     }
     
     .card_Avis1 {
         border-radius: 30px;
@@ -41,7 +42,9 @@
          p {width:  80%;
             margin: 0 auto;
             padding-bottom: 30px;}
-         h4 {padding-top: 30px;}
+         h4 {padding-top: 30px;
+        text-align: center;
+        }
 
          @media screen and (max-width: 600px) {
              
@@ -49,4 +52,6 @@
                     display : inline-block; }
                 }
             
-          
+.container_Avis .avatar{
+    text-align: center;
+}

@@ -1,9 +1,12 @@
 .bestquiz .card {
 margin: 0 auto;
+border: 1px;
+border-radius: 10px 10px;
 }
 
 .bestquiz a {
     text-decoration: none;
+    
 }
 
 .bestquiz a:hover {
@@ -11,4 +14,13 @@ margin: 0 auto;
     font-size: 35px;
 }
  
+.bestquiz .card-img-top{
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border: 1px;
+    object-fit: cover;
+}
 
+.bestquiz .card-title{
+    text-align: center;
+}

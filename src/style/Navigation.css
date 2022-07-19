@@ -1,7 +1,7 @@
 .navbar{
     font-family: 'Roboto Slab', serif;
     background-color: #0a2461;
-   mix-blend-mode: lighten;
+
    border: 1px solid #0a2461;
    border-radius: 10px 10px;
 }
@@ -39,7 +39,7 @@ a:hover {
 }
 .navbar{
  
-    margin-top: 3px;
+    /* margin-top: 3px; */
 }
 .burger{
     width: 40px;

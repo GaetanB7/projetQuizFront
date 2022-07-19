@@ -23,7 +23,7 @@ function App() {
       <BrowserRouter>    
           
         <Navigation />
-       <div className='mt-5 col-md-10'>
+       <div className='mt-5 container-fluid'>
        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/quizs" element={<QuizCat />} />
