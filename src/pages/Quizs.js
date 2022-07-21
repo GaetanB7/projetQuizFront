@@ -14,7 +14,7 @@ const Quizs = () => {
     <div className="container-fluid mt-5" style={{ paddingTop: "100px" }}>
       <div className="row d-flex">
         {quizs.map((quiz) => (
-          <div key={quiz.id} className="col-12 col-md-3">
+          <div key={quiz.id} className="col-12 col-sm-3 col-md-3 mb-5">
             <Link to={`/quiz/${quiz.id}`}>
               <div
                 className="card border-0 Quizs-card"

@@ -1,6 +1,6 @@
 .cardQuiz{
-    width: 60%;
-    height: 620px;
+    width: 67%;
+    height: 710px;
     background: rgb(255,255,255);
     background: linear-gradient(33deg, rgba(255,255,255,1) 0%, rgba(179,232,229,1) 12%, rgba(59,171,181,0.95) 30%, rgba(38,32,100,1) 86%, rgba(9,31,31,1) 100%); 
     border-radius: 35px;
@@ -14,8 +14,14 @@
 .cardQuiz h2{
     font-size: 60pt ;
 }
+
+.cardQuiz h5{
+   font-size: 2rem;
+   text-align: right;
+}
+
 .cardQuiz h3{
- font-size: 40pt ;
+ font-size: 2.5rem ;
 }
 .button-reponse ul li{
 
@@ -27,3 +33,23 @@
     font-family: "font-1";
     src: url(../assets/Dongle-Regular.ttf);
   }
+
+/* .header-quiz{
+    display: flex;
+   height: 200px;
+    overflow: hidden; 
+
+  }
+   .header-quiz img{
+    border: 1px;
+    border-radius: 15px;
+    height: 200px;
+  }  */
+
+  @media screen and (max-width: 770px) {
+             
+    .cardQuiz {
+        width: 98%;
+        height: 1000px;
+        display : inline-block; }
+    }
