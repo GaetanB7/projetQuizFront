@@ -1,0 +1,29 @@
+.cardQuiz{
+    width: 60%;
+    height: 620px;
+    background: rgb(255,255,255);
+    background: linear-gradient(33deg, rgba(255,255,255,1) 0%, rgba(179,232,229,1) 12%, rgba(59,171,181,0.95) 30%, rgba(38,32,100,1) 86%, rgba(9,31,31,1) 100%); 
+    border-radius: 35px;
+    padding: 26px 15px 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    font-family:"font-1";
+    
+}
+.cardQuiz h2{
+    font-size: 60pt ;
+}
+.cardQuiz h3{
+ font-size: 40pt ;
+}
+.button-reponse ul li{
+
+    font-size: 50pt;
+
+}
+
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/Dongle-Regular.ttf);
+  }

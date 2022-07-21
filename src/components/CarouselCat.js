@@ -12,7 +12,6 @@ const CarouselCat = () => {
       .then((result) => setCategories(result.data));
       
   },[]);
-  console.log(categories);
   const settings = {
     dots: true,
     infinite: true,
