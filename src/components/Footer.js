@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React from 'react'
 import '../style/Footer.css';
-import Logo from './Logo';
+import { Link } from "react-router-dom";
 
 
 const Footer = () => (
@@ -19,12 +19,13 @@ const Footer = () => (
 
 
                 <div className="col-12 col-md-3 mt-5  d-flex">
-                    <a className="lien" href="#">
-                        <h5>Contact</h5>
-                    </a>
-                    <a className="lien" href="#">
-                        <h5> CGU</h5>
-                    </a>
+                    <Link className="lien" to="/quiz/contact">
+                    <h5>Contact</h5>
+                    </Link>
+                    <Link to='quiz/cgu' className="lien">
+                    <h5> CGU</h5>
+                    </Link>
+    
                 </div>
 
                 <div className="col-12 col-md-4 mt-5" >

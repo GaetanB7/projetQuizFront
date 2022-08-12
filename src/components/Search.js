@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import '../style/Search.css';
+import { Link} from "react-router-dom";
 
 const Search = () => {
+
+  const [search, setSearch] = useState();
+  const [quizData, setQuizData] = useState([]);
+  
+  useEffect(() => {
+    axios
+    .get(`http://localhost:8082/api/quiz/${search}`)
+    .then((res)=> setQuizData(res.data))
+  }, [search]);
+    
   return (
-    <div className="input-group mx-2 my-0 ">
-      <div className="form-outline d-flex">
-        <input type="search" id="form1" className="form-control inputCustom  fs-5" placeholder='search ...'  />
-        <button type="button" className="btn btnCustom">
+  <div>
+        <div className="form-outline d-flex ">
+        <input type="search" id="form1" className="form-control inputCustom  fs-5" placeholder='search ...' onChange={(e) => setSearch(e.target.value)} />
+        {/* <button type="button" className="btn btnCustom">
           <img className='icones' src="images/search.png" alt="search" />
-        </button>
+        </button> */}
+
+
       </div>
 
-    </div>
+      <ul className='result'>
+          {search &&(
+              quizData
+              .slice(0,8)
+              .map((quiz)=>
+              <Link to={`/quiz/${quiz.id}`} onClick={()=>setSearch(null)}><li>{quiz.titre} ({quiz.niveau})</li></Link>
+              )
+          )}
+        </ul>
+  </div>
+
+
+  
   );
 };
 

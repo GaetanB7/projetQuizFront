@@ -1,31 +1,39 @@
-import React, {useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
-import '../style/BestQuiz.css';
+import "../style/BestQuiz.css";
+
 
 const BestQuiz = () => {
   const [quiz, setQuiz] = useState({});
+
+
   useEffect(() => {
     console.log("API");
+
+    let randomQuiz = Math.floor((Math.random() * 3)+1);
+    console.log(randomQuiz)
     axios
-      .get("http://localhost:8082/api/quiz/find/1")
+      .get(`http://localhost:8082/api/quiz/find/${randomQuiz}`)
       .then((result) => setQuiz(result.data));
   }, {});
-console.log(quiz);
-  return (
 
-    <div className="bestquiz mb-5">
-        <div className="card border-0" style={{width:"50%"}}>
-  <img className="card-img-top" src={quiz.image} alt="Card image cap" />
-  <div className="card-body">
-    <h3 className="card-title"><a href="#">{quiz.titre}</a></h3>
-     {/* <h2>{quiz.questions.map((question)=> question.description)}</h2> */}
-  </div>
-</div>
-</div>
-        
-      )} 
+
+
+  console.log(quiz);
+  return (
+    <Link to={`/quiz/${quiz.id}`}>
+      <div className="bestquiz mb-5" style={{ backgroundColor:"rgb 0 0 0 0" }}>
+        <div className="card" style={{ width: "50%" }}>
+          <img src={quiz.image} alt="Card image cap" />
+          <h3 className="card-titre">
+            Le meilleur quiz de la semaine : <br />
+            <span>{quiz.titre}</span>
+          </h3>
+        </div>
+      </div>
+    </Link>
+  );
+};
 
 export default BestQuiz;
-
-
-  

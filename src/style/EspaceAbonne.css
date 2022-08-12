@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "font-2";
+    src: url(../assets/OleoScriptSwashCaps-Regular.ttf);
+  }
+
+.dashbord{
+    display: flex;
+    max-width: 65%;
+    margin: 50px auto;
+    /* padding: 20px 30px; */
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #ffffff6e;
+    border-left: 1px solid #ffffff6e;
+    border-radius: 40px;
+    color: #003461;
+  }
+
+  .dashbord h2{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+
+  .menu{
+    padding: 20px 30px;
+    /* border-top: 1px; */
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: rgb(0, 52, 97);
+    width: 350px;
+    color: white;
+    min-height: 739px;
+  }
+
+  .menu ul {
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+
+.menu ul li{
+    list-style: none;
+    padding-top: 40px;
+    cursor: pointer;
+  }
+
+  .nom-prenom{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.nom-prenom h4{
+font-family: "font-2",'Courier New', Courier, monospace;
+/* padding-right: 15px; */
+padding-top: 5px;
+}
+
+.profil-menu{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.status{
+    font-size: 10pt;
+    color: rgb(189, 189, 189);
+}
+
+.contenair-espace{
+    padding: 20px;
+    padding-left: 70px;
+    width: 100%;
+}
+
+.contenair-espace span{
+    color: #EB9202;
+    font-family: "font-2",'Courier New', Courier, monospace;
+    font-size: 20pt;
+}
+
+.contenair-espace h2{
+    font-family: "font-2",'Courier New', Courier, monospace;
+    font-size: 40pt;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.contenair-espace ul li{
+    list-style: none;
+    padding-bottom: 10px;
+}
+.contenair-espace h3{
+  width: 3  5%;
+}
+
+.menu li{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.menu li:hover{
+    text-decoration: none;
+    color: wheat !important;
+}
+
+.menu li:visited{
+    text-decoration: none;
+}
+
+.menu li.nav-active{
+    color: #EB9202;
+}
+
+.info-perso{
+  padding: 20px;
+  display: flex;
+border: 2px solid;
+border-radius: 20px;
+  margin-bottom: 40px;
+}
+.contenair-info{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+
+.coordonne{
+  padding: 20px;
+  display: flex;
+border: 2px solid;
+border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.autre-info{
+  padding: 20px;
+  display: flex;
+border: 2px solid;
+border-radius: 20px;
+
+}
+ul{
+  margin-bottom: 0 !important;
+}
+
+.icon-espace{
+  position: absolute;
+right: 100px;
+font-size: 20pt;
+cursor: pointer;
+}
+
+.edit-button{
+cursor: pointer;
+  position: absolute;
+right: 500px;
+margin-top: 5px;
+border: 1px solid;
+padding-left: 5px;
+padding-right: 5px;
+border-radius: 10px;
+background-color: #EB920226;
+user-select: none;
+}
+.edit-button:hover{
+  background-color: #eb9202b0;
+}
+
+.line-inf{
+  display: flex;
+}
+
+.info-perso ul {
+  width: 100%;
+}
+.separateur{
+  border-bottom: 1px solid;
+  width: 100%;
+}
+
+
+
+.modif-contenaire{
+width: 100%;
+}
+.modif-contenaire h2{
+  font-family: "font-2",'Courier New', Courier, monospace;
+  font-size: 40pt;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+
+.modif-contenaire{
+
+}
+
+.formulaire-upadate{
+  display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+.champ-update{
+  max-width: 400px;
+  text-align: center;
+}
+.champ-update .form-group{
+  margin-bottom: 15px;
+  height: 80px;
+  flex-direction: column;
+}
+
+.champ-update .form-control{
+  height: inherit;
+}
+
+.champ-update .btn{
+  height: 50px;
+width: 200px;
+margin-top: 35px;
+}

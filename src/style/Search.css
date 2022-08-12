@@ -1,0 +1,22 @@
+.recherche{
+    width: 300px;
+}
+.result{
+    position: absolute;
+    background-color: #317AC1;
+    list-style: none;
+    padding: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+ /* ul{
+    list-style: none;
+    padding: 2rem;
+} */
+
+.result li{
+    padding-top: 10px;
+    padding: 1.2rem;
+    font-size: 14pt;
+}

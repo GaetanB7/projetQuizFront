@@ -11,7 +11,7 @@ const Quizs = () => {
       .then((result) => setQuizs(result.data));
   }, []);
   return (
-    <div className="container-fluid mt-5" style={{ paddingTop: "100px" }}>
+    <div className="container-fluid mt-5" style={{ paddingTop: "150px" }}>
       <div className="row d-flex">
         {quizs.map((quiz) => (
           <div key={quiz.id} className="col-12 col-sm-3 col-md-3 mb-5">

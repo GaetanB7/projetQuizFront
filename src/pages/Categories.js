@@ -4,6 +4,7 @@ import '../style/Categories.css';
 import '../style/App.css';
 
 
+
 const Categories = () => {
 
         const [categories, setCategories] = useState([]);

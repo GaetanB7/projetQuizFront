@@ -1,26 +1,58 @@
 .bestquiz .card {
-margin: 0 auto;
-border: 1px;
-border-radius: 10px 10px;
-}
-
-.bestquiz a {
-    text-decoration: none;
+    margin: 0 auto;
+    border: 0px;
+    background-color: #00000000;
+    }
     
-}
-
-.bestquiz a:hover {
-    color:brown;
-    font-size: 35px;
-}
- 
-.bestquiz .card-img-top{
-    border-top-left-radius:10px;
-    border-top-right-radius:10px;
-    border: 1px;
-    object-fit: cover;
-}
-
-.bestquiz .card-title{
-    text-align: center;
-}
+    .bestquiz a {
+        text-decoration: none;
+        
+    }
+    
+    .bestquiz .card:hover {
+    
+        z-index: 5;
+        transform: scale(1.05);
+        transition: 1s;
+    }
+     
+    .bestquiz img{
+        border-radius:15px;
+        border: 1px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    .bestquiz .card-title{
+        text-align: center;
+    }
+    
+    .bestquiz .card-titre {
+        
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        /* transform: translate(-50%, -50%);     */
+    }
+    
+    .bestquiz .card-titre span{
+        font-size: 4.5rem;
+        color: #0a2461;
+        text-shadow:0 0 10px  #ffffff;
+        text-shadow: 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff, 0 0 2px #ffffff;;
+    }
+    
+    
+    .card-titre {
+        color: aliceblue;
+        text-shadow:0 4px 0 #000000;
+        font-size: 3rem;
+    }
+    
+    .bestquiz .card-titre:hover {
+        
+    
+        /* transform: translate(-60%, -60%);     */
+    }
+    
+    

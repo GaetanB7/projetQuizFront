@@ -1,0 +1,26 @@
+.quizdone{
+    width: 100%;
+    text-align: center;
+}
+.quizdone h3{
+    width: 100%;
+    padding-top: 30px;
+    font-size: 18pt;
+}
+.quizdone h2{
+font-family: "font-2";
+font-size: 40pt;
+padding: 10px;
+}
+.tab-score{
+    display: flex;
+    justify-content: center;
+}
+.tab-score .table{
+    width: 85%;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.nb-quiz{
+    font-size: 25pt;
+}

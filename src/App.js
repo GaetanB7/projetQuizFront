@@ -14,12 +14,23 @@ import Footer from './components/Footer';
 import Quizs from './pages/Quizs';
 import Categories from './pages/Categories';
 import QuizJouer from './pages/QuizJouer';
+import Cgu from './pages/Cgu';
+import Carousel from './components/Carousel';
+import React, { useState } from "react";
+import { hasAuthenticated } from './services/AuthApi';
+import Auth from './Contexts/Auth';
+
 
 
 
 function App() {
+
+  const [isAuthenticated, setIsAuthenticated] = useState(hasAuthenticated());
+
+  console.log("Auth : "+isAuthenticated)
   return (
     <div className="App">
+      <Auth.Provider value={{isAuthenticated, setIsAuthenticated}} >
       <BrowserRouter>    
           
         <Navigation />
@@ -31,14 +42,28 @@ function App() {
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/espace" element={<EspaceAbonne />} />
+          {/* <Route path="/espace" element={<EspaceAbonne />} /> */}
           <Route path="/quizs" element={<Quizs />} />
           <Route path="/quiz/:id" element={<QuizJouer />} />
+          <Route path="/quiz/contact" element={<Contact />} />
+          <Route path='/quiz/cgu' element={<Cgu />}/>
           <Route path="/categories" element={<Categories />} />
+          <Route path="*" element={<Home />} />
+
+        {isAuthenticated ? (
+        <Route path="/espace" element={<EspaceAbonne />} />
+    ) : (
+        <Route to="/connexion" />
+    )}
+
+
+          <Route path="/test" element={<Carousel />} />
         </Routes>
+
        </div>
        <Footer/>
       </BrowserRouter>
+      </Auth.Provider>
     </div>
   );
 }
