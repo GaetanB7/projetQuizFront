@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../style/Search.css';
 import { Link} from "react-router-dom";
+import { url } from '../services/AuthApi';
 
 const Search = () => {
 
@@ -10,7 +11,7 @@ const Search = () => {
   
   useEffect(() => {
     axios
-    .get(`http://localhost:8082/api/quiz/${search}`)
+    .get(url+`/api/quiz/${search}`)
     .then((res)=> setQuizData(res.data))
   }, [search]);
     

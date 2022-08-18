@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate  } from 'react-router-dom';
+import { url } from "../services/AuthApi";
 
 
 const UpdateUser = ({user}) => {
@@ -35,7 +36,7 @@ const UpdateUser = ({user}) => {
         console.log(formData)
         e.preventDefault();
     
-        axios.put("http://localhost:8082/api/user/update", formData).then(
+        axios.put(url+"/api/user/update", formData).then(
           (response) => {
             console.log(response.data)
             toast.success(response.data)

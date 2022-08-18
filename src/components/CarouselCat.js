@@ -2,12 +2,13 @@ import React, { Component, useEffect, useState } from "react";
 import '../style/CarouselCat.css';
 import Slider from "react-slick";
 import axios from "axios";
+import { url } from "../services/AuthApi";
 
 const CarouselCat = () => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8082/api/categories")
+      .get(url+"/api/categories")
      
       .then((result) => setCategories(result.data));
       

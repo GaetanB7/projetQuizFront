@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../style/Categories.css'; 
 import '../style/App.css';
+import { url } from '../services/AuthApi';
 
 
 
@@ -10,7 +11,7 @@ const Categories = () => {
         const [categories, setCategories] = useState([]);
 
         const getCategories = () => {
-            return axios.get('http://localhost:8082/api/categories')
+            return axios.get(url+'/api/categories')
             .then((result) => setCategories(result.data));
         }
 

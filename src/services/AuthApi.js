@@ -44,3 +44,5 @@ export function  getId () {
     const res = id.split(",")[0];
     return res;
   };
+
+  export const url ="http://apiquiz-env.eba-musywnht.eu-west-2.elasticbeanstalk.com";

@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../style/Quizs.css";
 import { Link } from "react-router-dom";
+import { url } from "../services/AuthApi";
 
 const Quizs = () => {
   const [quizs, setQuizs] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8082/api/quiz")
+      .get(url+"/api/quiz")
       .then((result) => setQuizs(result.data));
   }, []);
   return (

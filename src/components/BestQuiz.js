@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../style/BestQuiz.css";
+import { url } from "../services/AuthApi";
 
 
 const BestQuiz = () => {
@@ -14,7 +15,7 @@ const BestQuiz = () => {
     let randomQuiz = Math.floor((Math.random() * 3)+1);
     console.log(randomQuiz)
     axios
-      .get(`http://localhost:8082/api/quiz/find/${randomQuiz}`)
+      .get(url+`/api/quiz/find/${randomQuiz}`)
       .then((result) => setQuiz(result.data));
   }, {});
 

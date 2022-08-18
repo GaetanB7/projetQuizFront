@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { url } from '../services/AuthApi';
 import "../style/QuizDone.css";
 
 const QuizDone = ({ ids }) => {
@@ -8,7 +9,7 @@ const QuizDone = ({ ids }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/quizdone/find/${ids}`)
+      .get(url+`/api/quizdone/find/${ids}`)
       .then((result) => setQuizDone(result.data));
   }, []);
 

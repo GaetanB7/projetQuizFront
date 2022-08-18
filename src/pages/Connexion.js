@@ -4,6 +4,7 @@ import '../style/Connexion.css';
 import { ToastContainer, toast } from "react-toastify";
 import jwtDecode from "jwt-decode";
 import { useNavigate  } from 'react-router-dom';
+import { url } from "../services/AuthApi";
 
 const Connexion = () => {
 
@@ -29,7 +30,7 @@ const Connexion = () => {
       const handleSubmit = (e) => {
         console.log(formData);
         e.preventDefault();
-        axios.post("http://localhost:8082/auth/login", formData).then(
+        axios.post(url+"/auth/login", formData).then(
           (response) => {
             window.localStorage.setItem("authToken",response.data.accessToken);
             window.localStorage.setItem("username",response.data.email);

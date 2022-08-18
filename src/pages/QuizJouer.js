@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import "../style/QuizJouer.css";
-import { getId, hasAuthenticated } from "../services/AuthApi";
+import { getId, hasAuthenticated, url } from "../services/AuthApi";
 
 
 let point=0;
@@ -21,7 +21,7 @@ const QuizJouer = () => {
 
   const getQuiz = () => {
     axios
-      .get(`http://localhost:8082/api/quiz/find/${id}`)
+      .get(url+`/api/quiz/find/${id}`)
       .then((result) => setQuiz(result.data));
   };
 
@@ -31,7 +31,7 @@ const QuizJouer = () => {
     if(hasAuthenticated()){
       const ids = getId();
       axios
-      .get(`http://localhost:8082/api/user/find/${ids}`)
+      .get(url+`/api/user/find/${ids}`)
       .then((result) => setUser(result.data));
     }
   }, [start]);
@@ -142,7 +142,7 @@ console.log("le score est de :" +point);
           "quiz": quiz
         }
         console.log(formScore)
-        axios.post("http://localhost:8082/api/quizdone/add", formScore).then(
+        axios.post(url+"/api/quizdone/add", formScore).then(
           (response) => {
             console.log(response);
           },

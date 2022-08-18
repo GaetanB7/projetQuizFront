@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
 import "../style/EspaceAbonne.css";
-import { getId } from "../services/AuthApi";
+import { getId, url } from "../services/AuthApi";
 import UpdateUser from "../components/UpdateUser";
 import QuizDone from "../components/QuizDone";
 
@@ -20,7 +20,7 @@ console.log(display)
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/user/find/${ids}`)
+      .get(url+`/api/user/find/${ids}`)
       .then((result) => setUser(result.data));
   }, []);
 

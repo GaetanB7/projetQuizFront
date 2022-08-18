@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../style/Connexion.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { url } from "../services/AuthApi";
 
 const Inscription = () => {
   const initialFormData = Object.freeze({
@@ -34,7 +35,7 @@ const Inscription = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:8082/api/user/add", formData).then(
+    axios.post(url+"/api/user/add", formData).then(
       (response) => {
         console.log(response);
         toast.success(response.data)
