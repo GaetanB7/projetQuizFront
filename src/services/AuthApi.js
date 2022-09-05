@@ -45,4 +45,4 @@ export function  getId () {
     return res;
   };
 
-  export const url ="http://apiquiz-env.eba-musywnht.eu-west-2.elasticbeanstalk.com";
+  export const url ="https://www.quizgame.click;
