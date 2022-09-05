@@ -91,7 +91,7 @@ const Connexion = () => {
                 class="form-control"
                 name="password"
                 onChange={handleChange}
-                //placeholder="Mot de passe"
+                placeholder="Mot de passe"
               />
               <div onClick={() =>  setPasswordIsVisible(!passwordIsVisible)} class="icon btn">
                 <span class="fas fa-eye-slash"></span>
