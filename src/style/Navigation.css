@@ -68,3 +68,6 @@ a:hover {
 .menu-user{
     display: inherit;
 }
+.menu-quiz{
+align-items: center;
+}
