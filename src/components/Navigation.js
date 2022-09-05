@@ -46,9 +46,7 @@ const Navigation = () => {
               </li>
               <li className="nav-item d-flex">
                 {/* <img className="icones m-2" src="images/categorie.png" alt="" /> */}
-                <a className="nav-link m-0" href="/categories">
-                  <NavLink to="/categories">Categories</NavLink>
-                </a>
+                  <NavLink to="/categories" className="nav-link m-0">Categories</NavLink>
               </li>
               <li className="nav-item d-flex me-5">
                 {/* <img className="icones m-2" src="images/mail.png" alt="" /> */}
