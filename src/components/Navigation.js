@@ -40,9 +40,7 @@ const Navigation = () => {
             <ul className="navbar-nav menu-quiz">
               <li className="nav-item d-flex">
                 {/* <img className="icones m-2" src="images/stopwatch.png" alt="" /> */}
-                <a className="nav-link m-0" href="/quizs">
                   <NavLink to="/quizs">Quizs</NavLink>
-                </a>
               </li>
               <li className="nav-item d-flex">
                 {/* <img className="icones m-2" src="images/categorie.png" alt="" /> */}
@@ -50,9 +48,7 @@ const Navigation = () => {
               </li>
               <li className="nav-item d-flex me-5">
                 {/* <img className="icones m-2" src="images/mail.png" alt="" /> */}
-                <a className="nav-link m-0" href="/contact">
                   <NavLink to="/contact">Contact</NavLink>
-                </a>
               </li>
               <Search />
 
@@ -60,29 +56,21 @@ const Navigation = () => {
               {(!isAuthenticated && (
                 <>
                   <li>
-                    <a className="nav-link " href="/connexion">
                       {" "}
                       <NavLink to="/connexion">Connexion</NavLink>
-                    </a>
                   </li>
                   <li>
-                    <a className="nav-link " href="/inscription">
                       <NavLink to="/inscription">Inscription</NavLink>
-                    </a>
                   </li>
                 </>
               )) || (
                 <>
                   <li>
-                    <a className="nav-link ">
                       {" "}
                       <NavLink  to="/espace">Profil</NavLink>
-                    </a>
                   </li>
                   <li onClick={handleLogout}>
-                    <a className="nav-link ">
                     <NavLink  to="/">Deconnexion</NavLink>
-                    </a>
                   </li>
                 </>
                 // <>
