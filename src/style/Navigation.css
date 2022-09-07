@@ -106,9 +106,7 @@ a:hover {
     z-index: 101;
     cursor: pointer;
   }
-  .contenu-footer {
-    display: none;
-  }
+
   .menu-quiz {
     align-items: center;
     position: relative;
