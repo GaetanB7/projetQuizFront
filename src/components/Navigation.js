@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,  useState} from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import "../style/Navigation.css";
@@ -8,6 +8,7 @@ import { hasAuthenticated, logout } from "../services/AuthApi";
 
 const Navigation = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Auth);
+  const [burgerOpen, setBurgerOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
@@ -18,72 +19,61 @@ const Navigation = () => {
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-light">
+      <nav className="navbare ">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbare-brand" href="/">
             <NavLink to="/"></NavLink>
             <Logo />
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <img className="burger" src="images/menu.png" alt="burger" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <div className="col-2"></div>
-            <ul className="navbar-nav menu-quiz">
-              <li className="nav-item d-flex">
-                {/* <img className="icones m-2" src="images/stopwatch.png" alt="" /> */}
-                  <NavLink to="/quizs">Quizs</NavLink>
+
+
+      
+          <div className={burgerOpen? " navbar-content phone-menu" : "navbar-content" } >
+      <div className="button-navbar">
+            <ul className=" menu-quiz">
+              
+              <li className="">
+                  <NavLink to="/quizs" onClick={()=> setBurgerOpen(false)}>Quizs</NavLink>
               </li>
-              <li className="nav-item d-flex">
-                {/* <img className="icones m-2" src="images/categorie.png" alt="" /> */}
-                  <NavLink to="/categories">Categories</NavLink>
+              <li className="">
+                  <NavLink to="/categories" onClick={()=> setBurgerOpen(false)}>Categories</NavLink>
               </li>
-              <li className="nav-item d-flex me-5">
-                {/* <img className="icones m-2" src="images/mail.png" alt="" /> */}
-                  <NavLink to="/contact">Contact</NavLink>
+              <li className="">
+                  <NavLink to="/contact" onClick={()=> setBurgerOpen(false)}>Contact</NavLink>
               </li>
               <Search />
+          </ul>
+   
 
-              <div className="menu-user">
+   
+                <ul className="menu-user">
               {(!isAuthenticated && (
                 <>
                   <li>
                       {" "}
-                      <NavLink to="/connexion">Connexion</NavLink>
+                      <NavLink to="/connexion" onClick={()=> setBurgerOpen(false)}>Connexion</NavLink>
                   </li>
                   <li>
-                      <NavLink to="/inscription">Inscription</NavLink>
+                      <NavLink to="/inscription" onClick={()=> setBurgerOpen(false)}>Inscription</NavLink>
                   </li>
                 </>
               )) || (
                 <>
                   <li>
                       {" "}
-                      <NavLink  to="/espace">Profil</NavLink>
+                      <NavLink  to="/espace" onClick={()=> setBurgerOpen(false)} >Profil</NavLink>
                   </li>
                   <li onClick={handleLogout}>
-                    <NavLink  to="/">Deconnexion</NavLink>
+                    <NavLink  to="/" onClick={()=> setBurgerOpen(false)} >Deconnexion</NavLink>
                   </li>
                 </>
-                // <>
-                //   <li>
-                //   <NavLink  className="nav-link" to="/EspaceAbonne">Mon espace</NavLink>
-                //   </li>
-
-                //   <li style={{ color: "white" }} onClick={handleLogout}> <NavLink  className="nav-link" to="/">Deconnexion</NavLink></li>
-                // </>
               )}
+              </ul>
+   
                 </div>
-            </ul>
+           
           </div>
+                <img src="images/burger.png" alt="menu-burger" className="menu-burger" onClick={()=> setBurgerOpen(!burgerOpen)}/>
         </div>
       </nav>
       <br />
