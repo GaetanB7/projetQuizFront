@@ -6,6 +6,7 @@
     color: white;
     height:5%;   
     margin: 0;
+    margin-top: 70px;
     /* mix-blend-mode: lighten; */
 
  }
@@ -16,6 +17,10 @@
  .logo-footer{
    width: 400px;
    margin-top: 20px;
+   text-align: justify;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  }
 
  .logo-footer p{
@@ -25,6 +30,7 @@
  .footer-top{
    display: flex;
    justify-content: space-evenly;
+   margin-bottom: 60px;
  }
  .footer-nav{
    padding-top: 20px;
@@ -37,10 +43,16 @@
 
  .footer-inscription{
    margin-top: 20px;
+   display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
  }
 
- .footer-inscription p{
+ .footercontenu p{
    font-size: 10pt;
+   margin: 0;
+   padding: 0;
  }
 
  .row{
@@ -55,7 +67,9 @@
    background-color: black;
 }
 
-
+.contenu-footer ul{
+  padding: 0;
+}
 
  .lien{
         color: white; 
@@ -110,7 +124,6 @@
 
      
     .logoFooter{
-       margin-left: 12%;
       width: 65%;
       mix-blend-mode: lighten;
     }
@@ -123,6 +136,7 @@
 .footer-mid{
    display: flex;
    justify-content: center;
+   padding-bottom: 40px;
 }
 
 .cgu-footer{
@@ -135,8 +149,28 @@
    padding-right: 10px;
 }
 
-   
- 
+@media screen and  (max-width:1300px){
+  .reseau{
+    width: 40%;
+  }
+  
+} 
+
+@media screen and (max-width:950px) {
+  .reseau{
+    width: 60%;
+  }
+  .footer-top{
+    flex-direction: column;
+    align-items: center;
+  }
+  }
+
+@media screen and (max-width:570px) {
+  .reseau{
+    width: 100%;
+  }
+}
  
 
 

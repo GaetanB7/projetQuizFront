@@ -3,6 +3,9 @@
   background-color: #0a2461;
   height: 100px;
   font-family: "Courier New", Courier, monospace;
+  position: fixed;
+width: 100%;
+z-index: 10;
 }
 .navbare-brand {
   margin-left: -70px !important;
