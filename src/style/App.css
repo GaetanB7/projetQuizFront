@@ -1,5 +1,8 @@
 .App {
-  background-image: url("../../public/images/neon-future-game-pad-background-vector-35068740.jpg");
+  /* background-image: url("../../public/images/neon-future-game-pad-background-vector-35068740.jpg"); */
+  /* background-image: url("../../public/images/font.jpg"); */
+  /* background: rgb(0,2,43); */
+  background: linear-gradient(158deg, rgba(0,2,43,1) 0%, rgba(0,17,61,1) 10%, rgba(0,45,90,1) 19%, rgba(4,60,105,1) 24%, rgba(53,155,170,1) 50%, rgba(114,202,199,1) 60%, rgba(157,228,216,1) 71%, rgba(96,212,230,1) 84%, rgba(12,95,163,1) 96%, rgba(0,46,114,1) 100%); 
   /* background-size: cover; */
   background-size: 102%;
   margin: auto;
