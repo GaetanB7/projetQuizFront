@@ -23,8 +23,9 @@
     -webkit-text-stroke: 1px red;
 }
       
-.carouselcat img { object-fit: cover;
-    height: 300px; 
+.carouselcat img { 
+    object-fit: cover;
+    /* height: 300px;  */
     cursor: pointer;
     border: 1px;
     border-radius: 10px;
@@ -37,5 +38,23 @@
     transform: scale(1.1);
     transition: 0.6s;
 }
+
+@media screen and (max-width:900px) {
+  .slogan h1{
+    font-size: 20pt;
+  }
+  }
+  @media screen and (max-width:600px) {
+    .slogan h1{
+      font-size: 17pt;
+    }
+    }
+
+    @media screen and (max-width:400px) {
+        .slogan h1{
+          font-size: 12pt;
+        }
+        }
+   
 
 

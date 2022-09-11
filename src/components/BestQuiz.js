@@ -25,9 +25,9 @@ const BestQuiz = () => {
   return (
     <Link to={`/quiz/${quiz.id}`}>
       <div className="bestquiz mb-5" style={{ backgroundColor:"rgb 0 0 0 0" }}>
-        <div className="card" style={{ width: "50%" }}>
+        <div className="card card-quiz">
           <img src={quiz.image} alt="Card image cap" />
-          <h3 className="card-titre">
+          <h3 className="titre-quiz">
             Le meilleur quiz de la semaine : <br />
             <span>{quiz.titre}</span>
           </h3>

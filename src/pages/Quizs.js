@@ -12,19 +12,18 @@ const Quizs = () => {
       .then((result) => setQuizs(result.data));
   }, []);
   return (
-    <div className="container-fluid mt-5" style={{ paddingTop: "150px" }}>
-      <div className="row d-flex">
+    <div>
+      <h2 className="titre-quizCat">Les quizs :</h2>
+      <div className="quiz-carte">
         {quizs.map((quiz) => (
-          <div key={quiz.id} className="col-12 col-sm-3 col-md-3 mb-5">
+          <div key={quiz.id} className="carte-globale">
             <Link to={`/quiz/${quiz.id}`}>
               <div
                 className="card border-0 Quizs-card"
-                style={{ width: "24rem", backgroundColor: "rgba(0, 0, 0, 0)" }}
               >
                 <div className="card-top">
                   <img
                     className="card-img-top"
-                    style={{ height: "230px" }}
                     src={quiz.image}
                     alt="Card image cap"
                   />

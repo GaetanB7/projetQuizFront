@@ -18,7 +18,7 @@ const Navigation = () => {
   };
 
   return (
-    <div>
+    <div style={{ height: "100px" }}>
       <nav className="navbare ">
         <div className="container-fluid">
           <a className="navbare-brand" href="/">

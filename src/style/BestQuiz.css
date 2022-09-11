@@ -4,11 +4,14 @@
     background-color: #00000000;
     }
     
-    .bestquiz a {
-        text-decoration: none;
+a{
+        text-decoration: none !important;
         
     }
     
+    .card-quiz{
+        width: 60%;
+    }
     .bestquiz .card:hover {
     
         z-index: 5;
@@ -23,19 +26,19 @@
         cursor: pointer;
     }
     
-    .bestquiz .card-title{
+    .bestquiz .titre-quiz{
         text-align: center;
+        color: aliceblue;
+        text-shadow:0 4px 0 #000000;
+        font-size: 3rem;
     }
     
-    .bestquiz .card-titre {
+    .bestquiz .titre-quiz {
         
-        position: absolute;
-        top: 25%;
-        left: 35%;
-        /* transform: translate(-50%, -50%);     */
+        position: relative;
     }
     
-    .bestquiz .card-titre span{
+    .bestquiz .titre-quiz span{
         font-size: 4.5rem;
         color: #0a2461;
         text-shadow:0 0 10px  #ffffff;
@@ -43,16 +46,45 @@
     }
     
     
-    .card-titre {
-        color: aliceblue;
-        text-shadow:0 4px 0 #000000;
-        font-size: 3rem;
-    }
+
     
-    .bestquiz .card-titre:hover {
+    .bestquiz .titre-quiz:hover {
         
     
         /* transform: translate(-60%, -60%);     */
     }
+
+    @media screen and (max-width:1570px) {
+        .bestquiz .titre-quiz span{font-size: 3.5rem;}
+        .bestquiz .titre-quiz{font-size: 2.5rem;}
+    }
+
+    @media screen and (max-width:1200px) {
+        .card-quiz{width: 70%;}
+        .bestquiz .titre-quiz span{font-size: 3.1rem;}
+        .bestquiz .titre-quiz{font-size: 2.1rem;}
+    }
     
+    @media screen and (max-width:900px) {
+        .card-quiz{width: 75%;}
+        .bestquiz .titre-quiz span{font-size: 3rem;}
+        .bestquiz .titre-quiz{font-size: 1.8rem;}
+    }
+    
+    @media screen and (max-width:700px) {
+        .card-quiz{width: 80%;}
+        .bestquiz .titre-quiz span{font-size: 2.7rem;}
+        .bestquiz .titre-quiz{font-size: 1.8rem;}
+    }
+    @media screen and (max-width:500px) {
+        .card-quiz{width: 90%;}
+        .bestquiz .titre-quiz span{font-size: 2rem;}
+        .bestquiz .titre-quiz{font-size: 1.4rem;}
+    }
+    
+    @media screen and (max-width:350px) {
+        .card-quiz{width: 100%;}
+        .bestquiz .titre-quiz span{font-size: 1.7rem;}
+        .bestquiz .titre-quiz{font-size: 1.1rem;}
+    }
     

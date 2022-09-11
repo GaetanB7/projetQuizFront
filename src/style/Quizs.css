@@ -7,3 +7,35 @@
     text-decoration: none;
     color: white;
 }
+.quiz-carte{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.carte-globale a{
+    text-decoration: none;
+    color: white;
+}
+
+.carte-globale{
+margin: 10px;
+}
+
+.titre-quizCat{
+    text-align: center;
+margin-bottom: 80px;
+margin-top: 80px;
+font-size: 40pt;
+text-transform: uppercase;
+letter-spacing: 3pt;
+
+}
+
+.carte-globale .card-img-top{
+    height: 230px;
+}
+
+.carte-globale .Quizs-card{
+    width: 24rem; 
+    background-color: rgba(0, 0, 0, 0);
+}
