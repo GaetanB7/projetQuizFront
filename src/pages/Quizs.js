@@ -17,7 +17,7 @@ const Quizs = () => {
       <div className="quiz-carte">
         {quizs.map((quiz) => (
           <div key={quiz.id} className="carte-globale">
-            <Link to={`/quiz/${quiz.id}`}>
+            <Link to={`/quiz/${quiz.id}`} className="Card-Link">
               <div
                 className="card border-0 Quizs-card"
               >

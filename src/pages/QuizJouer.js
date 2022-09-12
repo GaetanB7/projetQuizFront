@@ -89,35 +89,31 @@ console.log("le score est de :" +point);
         <div style={{ width: "100%" }}>
 
 
-<div className="card mb-3 border-0" style={{maxWidth:"100%", backgroundColor:"rgb(0,0,0,0)"}}>
+<div className="card border-0" style={{maxWidth:"100%", backgroundColor:"rgb(0,0,0,0)"}}>
+<h5 className="nb-question">{[i+1]} / {quiz.questions.length}</h5>
   <div className="row g-0">
     <div className="col-md-4">
-      <img src={quiz.questions[i].image} className="img-fluid height: auto rounded" style={{ width: "70%" }} alt="..."/>
+      <img src={quiz.questions[i].image} className="img-fluid height: auto rounded img-question"  alt="..."/>
     </div>
-    <div className="col-md-8">
+    <div className="col-md-8 card-question">
       <div className="card-body">
-        <h5 className="card-title">{[i+1]} / {quiz.questions.length}</h5>
         <h3 className="card-text">{quiz.questions[i].description}</h3>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-          <ul>
+          <ul className="liste-question">
             {quiz.questions[i].reponses.map((value, index) => {
-              return <div className="m-4" >
-                        <input type="checkbox" className="btn-check" name="box" id={`${index}`} autocomplete="off" style={{ width: "100%" }}/>
-                        <label className="btn btn-outline-primary" for={`${index}`} style={{ width: "100%" , fontSize:"20pt"}} >{value.description}</label>
+              return <div className=" box-reponse" >
+                        <input type="checkbox" className="btn-check" name="box" id={`${index}`} autocomplete="off"/>
+                        <label className="btn btn-outline-primary btn-reponse" for={`${index}`} >{value.description}</label>
                      </div> 
               
             })}
           </ul>
           {!start &&(
         
-        <button className="btn btn-success mt-4 btn-block btn-lg" type="submit" onClick={click} style={{ width: "30%" ,height:"60px",}}>
+        <button className="btn btn-success mt-4 btn-block btn-lg btn-valider" type="submit" onClick={click}>
         Valider
       </button>
 
@@ -176,18 +172,18 @@ console.log("le score est de :" +point);
   };
 
   return (
-    <div className="container-fluid mt-5" style={{ paddingTop: "100px" }}>
+    <div className="container-fluid quiz-jouer" >
       <div className="cardQuiz text-center">
         {start && (
-          <div className=" text-center" style={{ width: "100%" }}>
+          <div className=" text-center content-card" >
             <h2>
               {quiz.titre}
             </h2>
-            Niveau : <span className="text-muted"> {quiz.niveau}</span>
+            <h4>Niveau : <span className="text-muted"> {quiz.niveau}</span></h4>
             <h3>Nombre de questions : {quiz.nbQuestion}</h3>
-            <h1>Categorie : {quiz.categorie && quiz.categorie.titre}</h1>
-            <img src={quiz.image} alt="" style={{ width: "35%" ,border:"1px", borderRadius:"15px"}}/> <br/>
-            <button type="button" className="btn btn-success mt-4 btn-block btn-lg" onClick={() => setStart(!start)} style={{ width: "80%" ,height:"60px"}}>
+            <h3>Categorie : {quiz.categorie && quiz.categorie.titre}</h3>
+            <img src={quiz.image} alt="" /> <br/>
+            <button type="button" className="btn btn-success mt-4 btn-block btn-lg" onClick={() => setStart(!start)}>
               Demarrer
               <div className="visually-hidden">
               {

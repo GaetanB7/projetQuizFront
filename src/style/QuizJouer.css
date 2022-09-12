@@ -1,10 +1,16 @@
+.quiz-jouer{
+margin-top: 70px;
+}
+.box-reponse{
+margin: 15px;
+}
 .cardQuiz{
   width: 67%;
-  min-height: 710px;
+  /* min-height: 710px; */
   background: rgb(255,255,255);
   background: linear-gradient(33deg, rgba(255,255,255,1) 0%, rgba(179,232,229,1) 12%, rgba(59,171,181,0.95) 30%, rgba(38,32,100,1) 86%, rgba(9,31,31,1) 100%); 
   border-radius: 35px;
-  padding: 26px 15px 30px;
+  padding: 26px 10px 30px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
@@ -26,7 +32,33 @@ font-size: 2.5rem ;
 .button-reponse ul li{
 
   font-size: 50pt;
+}
 
+.card .nb-question{
+ text-align: center;
+ /* margin-bottom: 25px; */
+}
+
+.btn-reponse{
+  width: 100% ;
+  font-size: 20pt;
+}
+.btn-valider{
+  width: 30%; 
+  height: 60px;
+}
+
+.cardQuiz ul{
+  margin: 0;
+  padding: 0;
+}
+.card-question{
+  display: flex;
+align-items: center;
+}
+
+.card-body h3{
+  /* margin-top: 45px; */
 }
 
 @font-face {
@@ -55,14 +87,160 @@ font-size: 2.5rem ;
   background-color: #317AC1;
 }
 
+.cardQuiz h4{
+  padding: 0;
+} 
+
+
+.content-card{
+  width: 100%;
+}
+
+.content-card .btn-success{
+  width: 80% ;
+  height: 60px;
+}
+
+.content-card img {
+  width: 35%;
+  border:1px;
+   border-radius: 15px;
+}
+
+
+.img-question{
+  width: 100%;
+}
+
+
+/* reponsive */
+
+@media screen and (max-width: 1500px) {
+             
+  .cardQuiz{
+    width: 75%;
+  }
+
+  }
+
+  @media screen and (max-width: 1200px) {
+             
+    .cardQuiz{
+      width: 80%;
+    }
+    .cardQuiz h2 {
+      font-size: 53pt;
+    }
+    .cardQuiz h3 {
+      font-size: 20pt;
+    }
+    .cardQuiz h4{
+      font-size: 15pt;
+    }
+    }
+
+    @media screen and (max-width: 1000px) {
+             
+      .cardQuiz{
+        width: 90%;
+      }
+      .content-card img{
+        width: 40%;
+      }
+      .cardQuiz h5{
+        font-size: 1.3rem;
+      }
+      .cardQuiz h3{
+        font-size: 15pt;
+      }
+    }
+
+      @media screen and (max-width: 800px) {
+             
+        .cardQuiz{
+          width: 98%;
+        }
+    
+        .cardQuiz h2 {
+          font-size: 45pt;
+        }
+        .cardQuiz h3 {
+          font-size: 17pt;
+        }
+        .cardQuiz h4{
+          font-size: 12pt;
+        }
+
+        .content-card .btn-success{
+          width: 70% ;
+          height: 52px;
+        }
+        .content-card img{
+          width: 45%;
+        }
+
+        }
+
+        @media screen and (max-width: 600px) {
+             
+          .cardQuiz{
+            width: 100%;
+          }
+          .cardQuiz h2 {
+            font-size: 33pt;
+          }
+          .cardQuiz h3 {
+            font-size: 13pt;
+          }
+          .cardQuiz h4{
+            font-size: 10pt;
+          }
+
+          .content-card .btn-success{
+            width: 60% ;
+            height: 45px;
+          }
+
+            .content-card img{
+              width: 65%;
+            }
+            .btn-reponse{
+              font-size: 10pt !important;
+            }
+            .box-reponse{
+              /* margin: 1.2rem !important; */
+            }
+          }
 
 @media screen and (max-width: 770px) {
            
   .cardQuiz {
       width: 98%;
-      height: 1000px;
-      display : inline-block; }
+      /* height: 1000px; */
+      display : inline-block; 
+    }
+    .btn-reponse{
+      font-size: 16pt;
+    }
+    .box-reponse{
+      width: 30%;
+      margin: 10px;
+    }
+    .liste-question{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .img-question{
+      width: 40%;
+    }
+    .btn-valider{
+      width: auto;
+      height: auto;
+    }
+
   }
+
 
   .cardQuiz .img-fluid{
 

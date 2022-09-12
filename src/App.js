@@ -34,7 +34,7 @@ function App() {
       <BrowserRouter>    
           
         <Navigation />
-       <div className='mt-5 container-fluid'>
+       <div className=' container-fluid'>
        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categorie/categorie/id" element={<QuizCat />} />
