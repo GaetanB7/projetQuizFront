@@ -14,16 +14,38 @@ const CarouselCat = () => {
       
   },[]);
 
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className="arrows next"
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <div
+        className="arrows prev"
+        onClick={onClick}
+      />
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
-    autoplay:true,
-    autoplaySpeed:5000,
-    speed: 5000,
+     autoplay:true,
+     autoplaySpeed:10000,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
     cssEase:"linear",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1500,
