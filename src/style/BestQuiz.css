@@ -8,7 +8,11 @@ a{
         text-decoration: none !important;
         
     }
-    
+    .card-quiz img{
+        height: auto;
+        width: 99%;
+    }
+
     .card-quiz{
         width: 60%;
     }
