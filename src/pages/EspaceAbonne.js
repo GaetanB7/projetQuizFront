@@ -27,8 +27,8 @@ console.log(display)
   console.log(user);
 
   return (
-    <div style={{ paddingTop: "100px" }}>
-      <h2>Espace Abonné</h2>
+    <div >
+
 
       <div className="dashbord">
         <div className="menu">
@@ -105,9 +105,6 @@ console.log(display)
               <h3>Coordonnées</h3>
               <ul>
                 <li>
-                  <div className="edit-button" onClick={() => setEdit(true)}>
-                    Edit
-                  </div>
                   <div>  <span>Email : </span> {user.email}</div>
                 
                 </li>

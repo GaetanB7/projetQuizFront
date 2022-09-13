@@ -69,7 +69,7 @@ const UpdateUser = ({user}) => {
       <input
         autocomplete="off"
         type="text"
-        className="form-control"
+        className="form-control form-modif"
         name="nom"
         onChange={handleChange}
         placeholder="Nom"
@@ -82,7 +82,7 @@ const UpdateUser = ({user}) => {
       <input
         autocomplete="off"
         type="text"
-        className="form-control"
+        className="form-control form-modif"
         name="prenom"
         onChange={handleChange}
         placeholder="Prenom"
@@ -95,7 +95,7 @@ const UpdateUser = ({user}) => {
       <input
         autocomplete="off"
         type="text"
-        className="form-control"
+        className="form-control form-modif"
         name="pseudo"
         onChange={handleChange}
         placeholder="Pseudo"
@@ -103,17 +103,21 @@ const UpdateUser = ({user}) => {
       />
     </div>
 
-    <div className="form-group d-flex align-items-center">
+ {/* possibilité de mise à jour de l'email supprimer */}
+ 
+    {/* <div className="form-group d-flex align-items-center">
     <div>Email</div>
       <input
         type="email"
-        className="form-control"
+        className="form-control form-modif"
         name="email"
         onChange={handleChange}
         placeholder="Email"
         defaultValue={user.email}
       />
-    </div>
+    </div> */}
+
+
     <div className="btn btn-primary mb-3" onClick={handleSubmit}>
       Mettre à jour
     </div>

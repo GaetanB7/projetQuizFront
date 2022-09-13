@@ -5,7 +5,7 @@
 
 .dashbord{
     display: flex;
-    max-width: 65%;
+    max-width: 1220px;
     margin: 50px auto;
     /* padding: 20px 30px; */
     min-height: 500px;
@@ -15,11 +15,18 @@
     border-radius: 40px;
     color: #003461;
   }
+.dashbord ul{
+padding: 0 ;
+}
 
   .dashbord h2{
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
+  }
+
+  .contenair-info h3{
+padding-right: 15px;
   }
 
   .menu{
@@ -68,8 +75,8 @@ padding-top: 5px;
 }
 
 .contenair-espace{
-    padding: 20px;
-    padding-left: 70px;
+    padding: 30px;
+    /* padding-left: 70px; */
     width: 100%;
 }
 
@@ -153,8 +160,7 @@ cursor: pointer;
 
 .edit-button{
 cursor: pointer;
-  position: absolute;
-right: 500px;
+  position: relative;
 margin-top: 5px;
 border: 1px solid;
 padding-left: 5px;
@@ -169,6 +175,7 @@ user-select: none;
 
 .line-inf{
   display: flex;
+  justify-content: space-between;
 }
 
 .info-perso ul {
@@ -187,13 +194,11 @@ width: 100%;
 .modif-contenaire h2{
   font-family: "font-2",'Courier New', Courier, monospace;
   font-size: 40pt;
-  padding-left: 50px;
+  margin-bottom: 0;
+  /* padding-left: 50px; */
   padding-top: 30px;
 }
 
-.modif-contenaire{
-
-}
 
 .formulaire-upadate{
   display: flex;
@@ -219,3 +224,210 @@ margin-top: 20px;
 width: 200px;
 margin-top: 35px;
 }
+
+@media screen and (max-width:1000px) {
+  .menu{
+    width: 265px;
+  }
+
+  .menu ul{
+    font-size: 16pt;
+  }
+
+.info-perso{
+  flex-direction: column;
+}
+.coordonne{
+  flex-direction: column;
+}
+.autre-info{
+  flex-direction: column;
+}
+.contenair-espace h3{
+  text-align: center;
+  padding: 0;
+}
+}
+
+@media screen and (max-width:700px) {
+  .dashbord{
+    flex-direction: column;
+  }
+
+  .menu{
+    display: flex;
+    min-height: fit-content;
+    width: 100%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 0px;
+  }
+
+  .menu h2{
+    display: none;
+  }
+  .menu .profil-menu{
+    display: none;
+  }
+  .menu p{
+    display: none;
+  }
+  .menu nav{
+    width: 100%;
+  }
+  .menu ul{
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu ul li{
+    padding-top: 0;
+  }
+
+  .contenair-espace{
+    padding: 20px;
+  }
+
+  .contenair-espace h2{
+    display: none;
+  }
+  .contenair-info{
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width:600px) {
+.dashbord .menu{
+  font-size: 16pt;
+}
+.modif-contenaire h2{
+  font-size: 35pt;
+}
+
+}
+
+@media screen and (max-width:500px) {
+.dashbord .menu{
+  padding: 20px 15px;
+  font-size: 14pt;
+}
+.modif-contenaire h2{
+  font-size: 30pt;
+}
+.formulaire-upadate{
+  margin-top: 0;
+}
+}
+@media screen and (max-width:400px) {
+  .menu ul{
+    font-size: 14pt;
+  }
+
+  .form-modif{
+    width: 90% !important;
+  }
+
+  .dashbord .menu{
+    font-size: 12pt;
+  }
+  .info-perso{
+    padding: 10px;
+  }
+  .coordonne{
+   padding: 10px;
+  }
+  .autre-info{
+    padding: 10px;
+  }
+  .contenair-info h3{
+    font-size: 15pt;
+  }
+  .contenair-info .line-inf{
+    font-size: 14pt;
+  }
+  .contenair-info .line-inf span{
+    font-size: 16pt;
+  }
+  .coordonne div{
+    font-size: 14pt;
+  }
+  .coordonne div span{
+    font-size: 16pt;
+  }
+  .autre-info div{
+    font-size: 14pt;
+  }
+  .autre-info div span{
+    font-size: 16pt;
+  }
+  }
+
+
+  @media screen and (max-width:350px) {
+    .contenair-info h3{
+      font-size: 14pt;
+    }
+    .contenair-info .line-inf{
+      font-size: 13pt;
+    }
+    .contenair-info .line-inf span{
+      font-size: 15pt;
+    }
+    .coordonne div{
+      font-size: 13pt;
+    }
+    .coordonne div span{
+      font-size: 15pt;
+    }
+    .autre-info div{
+      font-size: 13pt;
+    }
+    .autre-info div span{
+      font-size: 15pt;
+    }
+    .menu ul{
+      font-size: 12pt;
+    }
+    }
+
+  @media screen and (max-width:300px) {
+
+    .form-modif{
+      width: 80% !important;
+    }
+
+    .dashbord .menu{
+      font-size: 11pt;
+    }
+
+    .champ-update .btn{
+      height: 42px;
+      width: 130px;
+    }
+
+    .contenair-info h3{
+      font-size: 13pt;
+    }
+    .contenair-info .line-inf{
+      font-size: 12pt;
+    }
+    .contenair-info .line-inf span{
+      font-size: 14pt;
+    }
+    .coordonne div{
+      font-size: 12pt;
+    }
+    .coordonne div span{
+      font-size: 14pt;
+    }
+    .autre-info div{
+      font-size: 12pt;
+    }
+    .autre-info div span{
+      font-size: 14pt;
+    }
+    .menu ul{
+      font-size: 11pt;
+    }
+    }
+  
