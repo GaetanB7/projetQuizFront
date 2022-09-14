@@ -44,8 +44,8 @@ const CarouselCat = () => {
     slidesToScroll: 3,
     initialSlide: 0,
     cssEase:"linear",
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    //  nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1500,
