@@ -95,13 +95,6 @@ align-items: center;
   color: #fff;
 }
 
-.cardQuiz .btn-outline-primary:hover{
-  color: #fff;
-  /* background-color: #317AC1; */
-  background-color: #eb9202;
-  transform: scale(1.05);
-  transition: 0.5s;
-}
 
 .cardQuiz h4{
   padding: 0;
@@ -116,10 +109,7 @@ align-items: center;
   width: 40% ;
   height: 60px;
 }
-.content-card .btn-success:hover{
-  transform: scale(1.1);
-  transition: 0.5s;
-}
+
 
 
 
@@ -132,6 +122,11 @@ align-items: center;
 
 .img-question{
   width: 100%;
+}
+
+.cardQuiz .img-fluid{
+
+  max-height: 235px;
 }
 
 
@@ -277,9 +272,15 @@ align-items: center;
 
   }
 
-
-  .cardQuiz .img-fluid{
-
-    max-height: 235px;
+  @media (hover : hover){
+    .cardQuiz .btn-outline-primary:hover{
+      color: #fff;
+      background-color: #317AC1;
+      transform: scale(1.05);
+      transition: 0.5s;
+    }
+    .content-card .btn-success:hover{
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
   }
-
