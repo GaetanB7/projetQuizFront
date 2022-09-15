@@ -39,6 +39,10 @@ letter-spacing: 3pt;
     width: 24rem; 
     background-color: rgba(0, 0, 0, 0);
 }
+.carte-globale img{
+    border: 1px;
+border-radius: 30px;
+}
 
 
 @media screen and (max-width: 400px) {

@@ -4,8 +4,9 @@
   letter-spacing: 5px; 
   font-weight: bolder;
   color: #EB9202;
-  margin-top: 10%;
-
+  margin-top: 5%;
+  margin-bottom: 5%;
+text-align: center;
 }
 /* .slogan:hover {
   color: #EB9202;

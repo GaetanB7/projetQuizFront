@@ -151,10 +151,10 @@ console.log("le score est de :" +point);
 
 
         return(
-            <div>
-                <h2>Quiz Terminé</h2>
+            <div className="affichage-finquiz">
+                {/* <h2>Quiz Terminé</h2> */}
                 <h3>Merci d'avoir joué!</h3>
-                <h2>Votre score est de {point}/{quiz.nbQuestion} !</h2>
+                <h2>Votre score est de <br /> <span>{point}/{quiz.nbQuestion}</span></h2>
           <Link to={"/quizs"}>
               <button type="button" className="btn btn-success mt-4 btn-block btn-lg" onClick={() => setStart(!start)} style={{ width: "80%" ,height:"60px"}}>
               Suivant
@@ -172,7 +172,7 @@ console.log("le score est de :" +point);
   };
 
   return (
-    <div className="container-fluid quiz-jouer" >
+    <div className=" quiz-jouer" >
       <div className="cardQuiz text-center">
         {start && (
           <div className=" text-center content-card" >

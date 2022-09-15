@@ -91,7 +91,7 @@ a:hover {
 
 @media screen and (max-width: 1376px) {
   .button-navbar ul li{
-      margin: 1%;
+      margin: 0.7rem;
   }
 
   .navigation{
@@ -104,6 +104,10 @@ a:hover {
   .logo{
   width: 82px;
   }
+  .logo-back{
+    width: 82px;
+  }
+
 
   .navbar-content {
     display: flex;

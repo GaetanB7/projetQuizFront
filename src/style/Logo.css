@@ -3,19 +3,30 @@
     /* margin-bottom: 15px; */
     margin-left: 100px;
     mix-blend-mode: lighten;
+    z-index: 10;
   
 }
-
-.logo:hover{
-    animation: rotation 3s linear;
+.logo-back{
+    z-index: 1;
+    left: 100px;
+    width:130px;
+    position: absolute;
+    mix-blend-mode: lighten;
+}
+.logo-back:hover{
+    transform: translateX(-2px) translateY(-2px);
 }
 
 @keyframes rotation {
     from {
-        transform: rotateY(0deg);
+        /* transform: rotateY(0deg); */
+        transform: translateX(0px);
+        transform: translateY(0px);
     }
 
     to {
-        transform: rotateY(360deg);
+        /* transform: rotateY(360deg); */
+        transform: translateY(-10px);
+        transform: translateY(-10px);
     }
 }

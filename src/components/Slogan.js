@@ -10,9 +10,9 @@ const Slogan = () => {
 
     return (
 
-        <Animated animationIn="flipInX" animationOut="fadeOut" isVisible={true}>
-            <div className='slogan mb-5'>
-                <h1>Challenger vos proches et vos amis en jouant à QuizGame !!</h1>
+        <Animated animationIn="flipInX " animationOut="fadeOut" isVisible={true}>
+            <div className='slogan'>
+                <h1 className='animate__backInLeft'>Challenger vos proches et vos amis en jouant à QuizGame !!</h1>
             </div>
         </Animated>
 

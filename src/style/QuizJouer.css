@@ -1,5 +1,6 @@
 .quiz-jouer{
 margin-top: 70px;
+text-align: center;
 }
 .box-reponse{
 margin: 15px;
@@ -18,7 +19,19 @@ margin: 15px;
   
 }
 .cardQuiz h2{
-  font-size: 60pt ;
+  font-size: 45pt ;
+}
+
+.affichage-finquiz{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 600px;
+}
+
+.cardQuiz h2 span{
+  font-size: 60pt;
+  color: #be7b0c;
 }
 
 .cardQuiz h5{
@@ -84,7 +97,10 @@ align-items: center;
 
 .cardQuiz .btn-outline-primary:hover{
   color: #fff;
-  background-color: #317AC1;
+  /* background-color: #317AC1; */
+  background-color: #eb9202;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .cardQuiz h4{
@@ -97,9 +113,15 @@ align-items: center;
 }
 
 .content-card .btn-success{
-  width: 80% ;
+  width: 40% ;
   height: 60px;
 }
+.content-card .btn-success:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+
 
 .content-card img {
   width: 35%;
@@ -172,7 +194,7 @@ align-items: center;
         }
 
         .content-card .btn-success{
-          width: 70% ;
+          /* width: 70% ; */
           height: 52px;
         }
         .content-card img{
@@ -182,7 +204,10 @@ align-items: center;
         }
 
         @media screen and (max-width: 600px) {
-             
+             .quiz-jouer{
+              margin-top: 50px;
+             }
+
           .cardQuiz{
             width: 100%;
           }
@@ -197,7 +222,7 @@ align-items: center;
           }
 
           .content-card .btn-success{
-            width: 60% ;
+            width: 200px ;
             height: 45px;
           }
 
@@ -212,6 +237,17 @@ align-items: center;
             }
           }
 
+          @media screen and (max-width: 400px) {
+            .content-card .btn-success{
+              width: 90% ;
+              height: 45px;
+            }
+            .btn-reponse{
+              font-size: 9pt !important;
+              padding: 0.35rem !important;
+            }
+          }
+
 @media screen and (max-width: 770px) {
            
   .cardQuiz {
@@ -223,7 +259,7 @@ align-items: center;
       font-size: 16pt;
     }
     .box-reponse{
-      width: 30%;
+      width: 40%;
       margin: 10px;
     }
     .liste-question{
