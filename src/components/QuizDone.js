@@ -24,7 +24,7 @@ const QuizDone = ({ ids }) => {
       <h3>Voici vos 10 derniers scores</h3>
 
       <div className="tab-score">
-        <table class="table table-dark table-hover table-borderless table-striped">
+        <table className="table table-dark table-hover table-borderless table-striped">
           <thead>
             <tr>
               <th scope="col">Categorie</th>

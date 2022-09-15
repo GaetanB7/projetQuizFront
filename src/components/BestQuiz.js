@@ -17,7 +17,7 @@ const BestQuiz = () => {
     axios
       .get(url+`/api/quiz/find/${randomQuiz}`)
       .then((result) => setQuiz(result.data));
-  }, {});
+  }, []);
 
 
 

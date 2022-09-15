@@ -61,71 +61,71 @@ const Connexion = () => {
 
     return (
         <div style={{ paddingTop: "130px" }}>
-        <div class="wrapper">
+        <div className="wrapper">
             <form action="#" className="formulaire-inscription">
-              <div class="h5 font-weight-bold text-center mb-3">Connexion</div>
+              <div className="h5 font-weight-bold text-center mb-3">Connexion</div>
   
  
   
-              <div class="form-group d-flex align-items-center">
-                <div class="icon">
-                  <span class="far fa-envelope"></span>
+              <div className="form-group d-flex align-items-center">
+                <div className="icon">
+                  <span className="far fa-envelope"></span>
                 </div>
                 <input
-                  autocomplete="off"
+                  autoComplete="off"
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   name="email"
                   onChange={handleChange}
                   placeholder="Email"
                 />
               </div>
   
-              <div class="form-group d-flex align-items-center">
-              <div class="icon">
-                <span class="fas fa-key"></span>
+              <div className="form-group d-flex align-items-center">
+              <div className="icon">
+                <span className="fas fa-key"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type={passwordIsVisible ? "text" : "password"}
-                class="form-control"
+                className="form-control"
                 name="password"
                 onChange={handleChange}
                 placeholder="Mot de passe"
               />
-              <div onClick={() =>  setPasswordIsVisible(!passwordIsVisible)} class="icon btn">
-                <span class="fas fa-eye-slash"></span>
+              <div onClick={() =>  setPasswordIsVisible(!passwordIsVisible)} className="icon btn">
+                <span className="fas fa-eye-slash"></span>
               </div>
             </div>
   
 
   
-              {/* <div class="mb-2">
-                  <label class="option">Remember me
+              {/* <div className="mb-2">
+                  <label className="option">Remember me
                       <input type="checkbox" checked/>
-                      <span class="checkmark"></span>
+                      <span className="checkmark"></span>
                   </label>
               </div> */}
   
-              <div class="btn btn-primary mb-3" onClick={handleSubmit}>
+              <div className="btn btn-primary mb-3" onClick={handleSubmit}>
                 Se connecter
               </div>
  
-              <div class="connect border-bottom mt-4 mb-4"></div>
-              <ul class="p-0 social-links">
+              <div className="connect border-bottom mt-4 mb-4"></div>
+              <ul className="p-0 social-links">
                 <li>
                   <a href="#">
-                    <span class="fab fa-facebook-f"></span>
+                    <span className="fab fa-facebook-f"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-google"></span>
+                    <span className="fab fa-google"></span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <span class="fab fa-github"></span>
+                    <span className="fab fa-github"></span>
                   </a>
                 </li>
               </ul>

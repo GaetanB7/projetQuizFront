@@ -77,7 +77,7 @@ const Inscription = () => {
                 <span className="far fa-user"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 name="nom"
@@ -91,7 +91,7 @@ const Inscription = () => {
                 <span className="far fa-user"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 name="prenom"
@@ -105,7 +105,7 @@ const Inscription = () => {
                 <span className="fas fa-user"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="text"
                 className="form-control"
                 name="pseudo"
@@ -119,7 +119,7 @@ const Inscription = () => {
                 <span className="far fa-envelope"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="email"
                 className="form-control"
                 name="email"
@@ -133,7 +133,7 @@ const Inscription = () => {
                 <span className="fas fa-key"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type={passwordIsVisible ? "text" : "password"}
                 className="form-control"
                 name="password"
@@ -150,7 +150,7 @@ const Inscription = () => {
                 <span className="fas fa-key"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type={passwordConfIsVisible ? "text" : "password"}
                 className="form-control"
                 name="confirmPassword"
@@ -167,7 +167,7 @@ const Inscription = () => {
                 <span className="far fa-calendar"></span>
               </div>
               <input
-                autocomplete="off"
+                autoComplete="off"
                 type="date"
                 className="form-control"
                 name="date_naissance"

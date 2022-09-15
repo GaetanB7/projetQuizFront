@@ -21,10 +21,9 @@ const Navigation = () => {
     <div className="navigation">
       <nav className="navbare ">
         <div className="container-fluid">
-          <a className="navbare-brand" href="/">
-            <NavLink to="/"></NavLink>
+          <NavLink to="/" className="navbare-brand" >
             { burgerOpen ? "" : <Logo /> }
-          </a>
+          </NavLink>
 
       
           <div className={burgerOpen? " navbar-content phone-menu" : "navbar-content" } >

@@ -30,8 +30,8 @@ const Search = () => {
           {search &&(
               quizData
               .slice(0,8)
-              .map((quiz)=>
-              <Link to={`/quiz/${quiz.id}`} onClick={()=>setSearch(null)}><li>{quiz.titre} ({quiz.niveau})</li></Link>
+              .map((quiz, index)=>
+              <Link key={index} to={`/quiz/${quiz.id}`} onClick={()=>setSearch(null)}><li>{quiz.titre} ({quiz.niveau})</li></Link>
               )
           )}
         </ul>

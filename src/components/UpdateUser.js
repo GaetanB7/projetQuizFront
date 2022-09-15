@@ -67,7 +67,7 @@ const UpdateUser = ({user}) => {
     <div className="form-group d-flex align-items-center">
         <div>Nom</div>
       <input
-        autocomplete="off"
+        autoComplete="off"
         type="text"
         className="form-control form-modif"
         name="nom"
@@ -80,7 +80,7 @@ const UpdateUser = ({user}) => {
     <div className="form-group d-flex align-items-center">
     <div>Prenom</div>
       <input
-        autocomplete="off"
+        autoComplete="off"
         type="text"
         className="form-control form-modif"
         name="prenom"
@@ -93,7 +93,7 @@ const UpdateUser = ({user}) => {
     <div className="form-group d-flex align-items-center">
     <div>Pseuso</div>
       <input
-        autocomplete="off"
+        autoComplete="off"
         type="text"
         className="form-control form-modif"
         name="pseudo"

@@ -31,8 +31,8 @@ const Categories = () => {
 
             <div className="card-body" >
                 {
-                    categories.map(categories=>
-                        <div>
+                    categories.map((categories,index)=>
+                        <div key={index}>
                             <img src={categories.image}  className="card-img-bottom" alt="..." />
                             <p className='titreCategorie'>{categories.titre}</p>
                         </div>

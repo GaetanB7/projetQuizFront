@@ -53,22 +53,22 @@ const Footer = () => (
                         <ul className="liste-media">
                             {/* <div className="col-4 d-flex justify-content-center text-center"> */}
 
-                            <li><span class="fab fa-facebook-f"></span>
+                            <li><span className="fab fa-facebook-f"></span>
                             </li>
 
-                            <li> <span class="fab fa-youtube"></span>
+                            <li> <span className="fab fa-youtube"></span>
                             </li>
                             
-                            <li> <span class="fab fa-instagram"></span>
+                            <li> <span className="fab fa-instagram"></span>
                             </li>
                             
-                            <li> <span class="fab fa-twitter"></span>
+                            <li> <span className="fab fa-twitter"></span>
                             </li>
 
-                            <li> <span class="fab fa-google"></span>
+                            <li> <span className="fab fa-google"></span>
                             </li>
                             
-                            <li> <span class="fab fa-pinterest"></span>
+                            <li> <span className="fab fa-pinterest"></span>
                             </li>
                         </ul>
                     </div>

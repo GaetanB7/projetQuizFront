@@ -93,7 +93,7 @@ console.log("le score est de :" +point);
 <h5 className="nb-question">{[i+1]} / {quiz.questions.length}</h5>
   <div className="row g-0">
     <div className="col-md-4">
-      <img src={quiz.questions[i].image} className="img-fluid height: auto rounded img-question"  alt="..."/>
+      <img src={quiz.questions[i].image} className="img-fluid height: auto  img-question"  alt="..."/>
     </div>
     <div className="col-md-8 card-question">
       <div className="card-body">
@@ -104,9 +104,9 @@ console.log("le score est de :" +point);
 </div>
           <ul className="liste-question">
             {quiz.questions[i].reponses.map((value, index) => {
-              return <div className=" box-reponse" >
-                        <input type="checkbox" className="btn-check" name="box" id={`${index}`} autocomplete="off"/>
-                        <label className="btn btn-outline-primary btn-reponse" for={`${index}`} >{value.description}</label>
+              return <div key={index} className=" box-reponse" >
+                        <input type="checkbox" className="btn-check" name="box" id={`${index}`} autoComplete="off"/>
+                        <label className="btn btn-outline-primary btn-reponse" htmlFor={`${index}`} >{value.description}</label>
                      </div> 
               
             })}
