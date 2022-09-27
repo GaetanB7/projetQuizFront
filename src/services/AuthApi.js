@@ -49,5 +49,5 @@ export function  getId () {
     return res;
   };
 
-//export const url ="https://www.quizgame.click";
-export const url ="http://localhost:8082";
+export const url ="https://www.quizgame.click";
+//export const url ="http://localhost:8082";
