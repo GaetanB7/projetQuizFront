@@ -32,11 +32,13 @@ const Connexion = () => {
         e.preventDefault();
         axios.post(url+"/auth/login", formData).then(
           (response) => {
+            console.log("response")
+            console.log(response)
             window.localStorage.setItem("authToken",response.data.accessToken);
             window.localStorage.setItem("username",response.data.email);
             toast("conecter")
             history("../espace"); 
-            window.location.reload()
+             window.location.reload()
           },
           (response) => {
             console.log(response);

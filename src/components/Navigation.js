@@ -8,13 +8,16 @@ import { hasAuthenticated, logout } from "../services/AuthApi";
 
 const Navigation = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Auth);
+  const { isAdministrator, setIsAdministrator } = useContext(Auth);
   const [burgerOpen, setBurgerOpen] = useState(false);
+
+
+  console.log("rdu")
+  console.log(isAdministrator);
 
   const handleLogout = () => {
     logout();
     setIsAuthenticated(false);
-    console.log("rdu")
-    console.log(isAuthenticated);
   };
 
   return (
@@ -48,7 +51,7 @@ const Navigation = () => {
               {(!isAuthenticated && (
                 <>
                   <li>
-                      {" "}
+                
                       <NavLink to="/connexion" onClick={()=> setBurgerOpen(false)}>Connexion</NavLink>
                   </li>
                   <li>
@@ -58,8 +61,12 @@ const Navigation = () => {
               )) || (
                 <>
                   <li>
-                      {" "}
+                      {isAdministrator?(
+                        <NavLink  to="/admin" onClick={()=> setBurgerOpen(false)} >Dashbord</NavLink>
+                      ):(
+
                       <NavLink  to="/espace" onClick={()=> setBurgerOpen(false)} >Profil</NavLink>
+                      )}
                   </li>
                   <li onClick={handleLogout}>
                     <NavLink  to="/" onClick={()=> setBurgerOpen(false)} >Deconnexion</NavLink>

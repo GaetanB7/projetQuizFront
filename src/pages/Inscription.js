@@ -16,6 +16,7 @@ const Inscription = () => {
     confirmPassword: "",
     date_naissance: "",
     User: "ABO",
+    role:"ABONNE",
   });
 
   const [formData, updateFormData] = useState(initialFormData);
@@ -42,7 +43,7 @@ const Inscription = () => {
         setIsValidate(false);
       },
       (response) => {
-        console.log(response.response.data);
+        console.log(response);
         setErrorData(response.response.data);
         toast.error(response.response.data);
       }

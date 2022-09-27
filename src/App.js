@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Connexion from './pages/Connexion';
 import Contact from './pages/Contact';
@@ -16,9 +16,10 @@ import Categories from './pages/Categories';
 import QuizJouer from './pages/QuizJouer';
 import Cgu from './pages/Cgu';
 import Carousel from './components/Carousel';
-import React, { useState } from "react";
-import { hasAuthenticated } from './services/AuthApi';
+import React, { useEffect, useState } from "react";
+import { hasAuthenticated, isAdmin } from './services/AuthApi';
 import Auth from './Contexts/Auth';
+import EspaceAdmin from './pages/EspaceAdmin';
 
 
 
@@ -26,15 +27,26 @@ import Auth from './Contexts/Auth';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(hasAuthenticated());
+  const [isAdministrator, setIsAdministrator] = useState(isAdmin());
+  const location = useLocation();
+  const path = location.pathname;
+  const [display, setDisplay] = useState(false);
 
+  useEffect(() => {
+    (path == "/admin") ? setDisplay(true) : setDisplay(false)
+  }, [path]);
+
+  console.log("admin "+isAdministrator)
   console.log("Auth : "+isAuthenticated)
+  console.log("path : "+path)
+  console.log("display : "+display)
   return (
     <div className="App">
-      <Auth.Provider value={{isAuthenticated, setIsAuthenticated}} >
-      <BrowserRouter>    
+      <Auth.Provider value={{isAuthenticated, setIsAuthenticated, isAdministrator, setIsAdministrator}} >
+      {/* <BrowserRouter>     */}
           
         <Navigation />
-       <div className=' container-fluid'>
+       <div className=' '>
        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categorie/categorie/id" element={<QuizCat />} />
@@ -50,9 +62,13 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="*" element={<Home />} />
 
-        {isAuthenticated ? (
-        <Route path="/espace" element={<EspaceAbonne />} />
-    ) : (
+        {isAuthenticated ? 
+        (
+          isAdministrator?
+          (<Route path='/admin' element={<EspaceAdmin />}/>)
+        : (<Route path="/espace" element={<EspaceAbonne />} />)
+        ) 
+    : (
         <Route to="/connexion" />
     )}
 
@@ -61,8 +77,8 @@ function App() {
         </Routes>
 
        </div>
-       <Footer/>
-      </BrowserRouter>
+       {display ? null :<Footer/> }
+      {/* </BrowserRouter> */}
       </Auth.Provider>
     </div>
   );

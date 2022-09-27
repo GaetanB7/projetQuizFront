@@ -1,4 +1,3 @@
-import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 
 export function hasAuthenticated() {
@@ -13,19 +12,24 @@ export function hasAuthenticated() {
     return result;
 }
 
-export function login(credentials) {
-    return axios
-        .post('http://localhost:8082/auth/login', credentials)
-        .then(response => response.data.token)
-        .then(token => {
-            window.localStorage.setItem('authToken', token);
-
-            return true;
-        });
+export function isAdmin() {
+    const token = window.localStorage.getItem('authToken');
+     const result = token ? getRole(token) : false;
+     return result;
 }
 
 export function logout() {
     window.localStorage.removeItem('authToken');
+}
+
+function getRole(token){
+    const { role: roles } = jwtDecode(token);
+
+    if(roles=="ADMIN"){
+        return true
+    }
+
+    return false;
 }
 
 function tokenIsValid(token) {
@@ -45,5 +49,5 @@ export function  getId () {
     return res;
   };
 
-export const url ="https://www.quizgame.click";
-//export const url ="http://localhost:8082";
+//export const url ="https://www.quizgame.click";
+export const url ="http://localhost:8082";
