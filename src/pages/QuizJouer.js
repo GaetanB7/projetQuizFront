@@ -8,7 +8,6 @@ import { getId, hasAuthenticated, url } from "../services/AuthApi";
 let point=0;
 const QuizJouer = () => {
   const { id } = useParams();
-  console.log("id:"+id);
   const [start, setStart] = useState(true);
   const [i, seti] = useState(0);
   const [quiz, setQuiz] = useState([]);
@@ -16,7 +15,8 @@ const QuizJouer = () => {
   const [score, setScore] = useState(0);
   const [user, setUser] = useState();
 
-
+ console.log("i")
+ console.log(i)
 
 
   const getQuiz = () => {
@@ -49,7 +49,6 @@ const recupValeurs = () =>{
 
     let rep = quiz.questions[i].reponses;
     let valid = rep.map((rep) => rep.valid)
-    console.log("valeur de i"+i);
 
     let nq = document.getElementsByName('box');
     let tabResult =[];
@@ -64,10 +63,10 @@ const recupValeurs = () =>{
          }
     }
     //setScore(result+score);
-    console.log("tabResult: ");
-    console.log(tabResult);
-    console.log("valid: ");
-    console.log(valid);
+    // console.log("tabResult: ");
+    // console.log(tabResult);
+    // console.log("valid: ");
+    // console.log(valid);
 
     
 
@@ -79,7 +78,6 @@ const recupValeurs = () =>{
          }
            
 }
-console.log("le score est de :" +point);
 
 
 
@@ -137,7 +135,7 @@ console.log("le score est de :" +point);
           "abonne": user,
           "quiz": quiz
         }
-        console.log(formScore)
+        // console.log(formScore)
         axios.post(url+"/api/quizdone/add", formScore).then(
           (response) => {
             console.log(response);
@@ -163,10 +161,17 @@ console.log("le score est de :" +point);
 
             </div>
         )
-    }else{
+    }else if(((start == false) && (quiz.questions.length == 0) )){
         return(
-        // <h2  style={{ fontSize: "150pt" , textAlign:"center",marginTop:"200px"}}>Coming soon...</h2>
-        <h2></h2>
+          <div>
+            <h2 >Coming soon...</h2>
+            <Link to={"/quizs"}>
+              <button type="button" className="btn btn-success mt-4 btn-block btn-lg" onClick={() => setStart(!start)} style={{ width: "40%" ,height:"60px"}}>
+              Retour
+            </button>
+          </Link>
+          </div>
+
         )
     }
   };
