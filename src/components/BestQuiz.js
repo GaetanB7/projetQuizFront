@@ -25,6 +25,7 @@ const BestQuiz = () => {
   return (
     <Link to={`/quiz/${quiz.id}`}>
       <div className="bestquiz mb-5" style={{ backgroundColor:"rgb 0 0 0 0" }}>
+        <h2>Quiz en vedette </h2>
         <div className="card card-quiz">
           <img src={quiz.image} alt="Card image cap" />
           <h3 className="titre-quiz">

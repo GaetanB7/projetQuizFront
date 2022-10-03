@@ -67,8 +67,8 @@ const Inscription = () => {
 
   
   return (
-    <div style={{ paddingTop: "130px" }}>
-      <div className="wrapper">
+    <div >
+      <div className="wrapper wrapper-inscription">
         {isValidate && (
           <form action="#" className="formulaire-inscription">
             <div className="h5 font-weight-bold text-center mb-3">Inscription</div>
@@ -156,7 +156,7 @@ const Inscription = () => {
                 className="form-control"
                 name="confirmPassword"
                 onChange={handleChange}
-                placeholder="Confimer le mot de passe"
+                placeholder="Confirmer le mot de passe"
               />
               <div onClick={() => setPasswordConfIsVisible(!passwordConfIsVisible)} className="icon btn">
                 <span className="fas fa-eye-slash"></span>

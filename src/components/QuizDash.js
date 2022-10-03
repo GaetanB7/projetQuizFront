@@ -11,7 +11,6 @@ const QuizDash = () => {
   const initialFormData = Object.freeze({
     titre: "",
     image: "",
-    questions: [],
   });
 
   const initialNiveauCat = Object.freeze({
@@ -28,7 +27,9 @@ const QuizDash = () => {
   const [formData, updateFormData] = useState(initialFormData);
   const [niveauCat, setNiveauCat] = useState(initialNiveauCat);
   const [addBtnQuestion, setAddBtnQuestion] = useState(false);
+  const [question, setQuestion] = useState();
   const [categorie, setCategorie] = useState([]);
+  const [quizId, setQuizId] = useState(null);
 
   useEffect(() => {
     axios
@@ -39,8 +40,15 @@ const QuizDash = () => {
   
   
   let optionCat = categorie.map( res =>( { value: res, label: res.titre, name: "categorie" }))
-  console.log(niveauCat);
-  
+ 
+  const displayBtn = ()=>{
+    setAddBtnQuestion(!addBtnQuestion)
+  }
+
+  const click = (e)=>{
+    displayBtn();
+    handleSubmit(e);
+  }
   const handleChange = (e) => {
     updateFormData({
       ...formData,
@@ -52,14 +60,13 @@ const QuizDash = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     var res = Object.assign({}, niveauCat, formData);
-    console.log("res")
-    console.log(res)
     axios
     .post(url + "/api/quiz/add", res)
     .then((response) => {
       toast.success(response);
       toast.success("Quiz mis  jour!")
-      console.log(response)
+      setQuizId(response.data.id)
+      console.log(response);
     })
     .catch((response) => {
       console.log(response);
@@ -73,7 +80,14 @@ const QuizDash = () => {
     });
   };
 
-console.log(addBtnQuestion)
+
+  // console.log("question")
+  // console.log(question)
+
+  // var res = Object.assign({}, niveauCat, formData,question);
+  // console.log("res")
+  // console.log(res)
+
   return (
     <div className="main">
       <div className="content">
@@ -105,7 +119,7 @@ console.log(addBtnQuestion)
               </div>
 
         {addBtnQuestion &&(
-          <AddQuestion />
+          <AddQuestion question={question} setQuestion={setQuestion} id={quizId} />
         )
 
         }
@@ -113,7 +127,7 @@ console.log(addBtnQuestion)
 {!addBtnQuestion &&(
           
               <div className="ajout-question">
-                <div className="btn-ajout-question" onClick={()=>setAddBtnQuestion(!addBtnQuestion)}>
+                <div className="btn-ajout-question" onClick={click}>
                   <h3>Ajoutez une question?</h3>
                   <i class="fa-solid fa-plus"></i>
                 </div>

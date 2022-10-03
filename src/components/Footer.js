@@ -39,8 +39,8 @@ const Footer = () => (
                     </h4>
                     <p>
                         Toujours pas de compte? <br /> <Link className="lien-inscription" to="/inscription">
-                        Inscrivez vous
-                    </Link> maintenant et profiter de plein de nouvelles fonctionalité
+                        Inscrivez-vous
+                    </Link> maintenant et profiter de plein de nouvelles fonctionnalités
                     </p>
                 </div>
 
@@ -49,7 +49,7 @@ const Footer = () => (
                 <div className="footer-mid" >
                     <div className="reseau ">
                     
-                    <h3>Suivez nous sur les réseau!</h3>
+                    <h3>Suivez-nous sur les réseaux!</h3>
                         <ul className="liste-media">
                             {/* <div className="col-4 d-flex justify-content-center text-center"> */}
 

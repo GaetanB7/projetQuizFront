@@ -62,7 +62,7 @@ const Connexion = () => {
       // }
 
     return (
-        <div style={{ paddingTop: "130px" }}>
+        <div >
         <div className="wrapper">
             <form action="#" className="formulaire-inscription">
               <div className="h5 font-weight-bold text-center mb-3">Connexion</div>

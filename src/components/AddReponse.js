@@ -1,25 +1,43 @@
 import React from "react";
 import { useState } from "react";
-import Select from "react-select";
+import axios from "axios";
+import { url } from "../services/AuthApi";
+import {toast } from "react-toastify";
 
-const AddReponse = ({reponse, setReponse,serviceList,setServiceList}) => {
+const AddReponse = ({reponse, setReponse,serviceList,setServiceList,i,questionId}) => {
   const initialReponseList = Object.freeze([
     {
       description: "",
       valid: false,
+      question:{
+        id:questionId
+      }
     },
   ]);
 
 
   const [reponseList, setReponseList] = useState(initialReponseList);
+  const [reponseTarget, setReponseTarget] = useState();
 
   const handleReponseChange = (e, index) => {
+    // const { name, value } = e.target;
+    // const list = [...reponseList];
+    // list[index][name] = value;
+    // setReponseList(list);
+    // const rep = {reponses :reponseList};
+    // const listFinale = [...serviceList];
+    // listFinale[i].reponses = rep;
+    // setServiceList(listFinale)
+
     const { name, value } = e.target;
-    //const list = [...reponseList];
     const list = [...reponseList];
     list[index][name] = value;
+    list[index].question.id = questionId;
     setReponseList(list);
-    setReponse([list]);
+    setReponseTarget(list[index])
+    console.log("reponseTarget")
+    console.log(reponseTarget)
+
   };
 
   const handleReponseRemove = (index) => {
@@ -33,8 +51,26 @@ const AddReponse = ({reponse, setReponse,serviceList,setServiceList}) => {
     setReponseList([...reponseList, { description: "", valid: false }]);
   };
 
-console.log("serviceList")
-console.log(serviceList)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+    .post(url + "/api/reponse/add", reponseTarget)
+    .then((response) => {
+      toast.success(response);
+      toast.success("réponse ajouté!")
+      console.log(response);
+    })
+    .catch((response) => {
+      console.log(response);
+      toast.error(response.response.data);
+    });
+  };
+
+  const click = (e)=>{
+    handleSubmit(e);
+    handleServiceAdd()
+  }
 
   return (
     <div className="AddReponse">
@@ -75,7 +111,7 @@ console.log(serviceList)
 
             {reponseList.length - 1 === index && reponseList.length < 4 && (
               <div className="ajout-reponse">
-                <div className="btn-ajout-reponse" onClick={handleServiceAdd}>
+                <div className="btn-ajout-reponse" onClick={click}>
                   <h3>Ajoutez une reponse?</h3>
                 </div>
               </div>
